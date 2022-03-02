@@ -18,8 +18,8 @@ namespace HomeWork_modul_01
             //else Console.WriteLine(a);
 
             Console.Write("Введите число: ");
-            //int a = Int32.Parse(Console.ReadLine());
-            int a = Console.ReadLine();
+            int a = Int32.Parse(Console.ReadLine());
+            //int a = Console.ReadLine();
             Console.Write("Введите процент: ");
             int b = Int32.Parse(Console.ReadLine());
             Console.Write(b);
