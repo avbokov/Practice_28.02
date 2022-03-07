@@ -11,7 +11,7 @@ namespace Practice_28._02
         static void Main(string[] args)
         {
             //Console.WriteLine();    //  передаёт информацию в консоль
-            //Console.ReadLine();     //  выводит информацию в консоль
+            //Console.ReadLine();     //  считывает информацию из консоль
 
             //Console.Write();
             //Console.WriteLine();
@@ -31,7 +31,7 @@ namespace Practice_28._02
             /*  ToBoolean
              *  ToByte
              *  ToChar
-             *  Toint16/32/64
+             *  ToInt16/32/64
              *  ToString
             */
             //int c = Int32.Parse(a); //  работает только со строками
