@@ -238,15 +238,50 @@ namespace Practic_04._03
         private static void Sorted(bool choice)
         {
             int[] myArray;
-            Arr(out myArray);          
+            Arr(out myArray);
 
-            if (choice) { }
-            else { }
-
+            if (choice)
+            {
+                //Array.Sort(myArray);
+                BoubleSort(myArray);
+                for (int i = 0; i < myArray.Length; i++)
+                {
+                    Console.Write(myArray[i] + " ");
+                }
+                Console.WriteLine("}");
+            }
+            else 
+            {
+                //Array.Sort(myArray);
+                //Array.Reverse(myArray);
+                ReverseBoubleSort(myArray);
+                for (int i = 0; i < myArray.Length; i++)
+                {
+                    Console.Write(myArray[i] + " ");
+                }
+                Console.WriteLine("}");
+            }
 
         }
+        private static int[] ReverseBoubleSort(int[] arr)
+        {
+            int temp;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i] < arr[j])
+                    {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
 
-        private static int BoubleSort(int[] arr)
+        private static int[] BoubleSort(int[] arr)
         {
             int temp;
             for (int i = 0; i < arr.Length; i++)
@@ -261,6 +296,7 @@ namespace Practic_04._03
                     }
                 }
             }
+            return arr;
         }
 
         static void Main(string[] args)
@@ -310,7 +346,7 @@ namespace Practic_04._03
 
             //Console.WriteLine(Mult(5,10));
 
-            Console.WriteLine(Fibanachi(8));
+            Sorted(true);
 
             Console.ReadLine();
         }
