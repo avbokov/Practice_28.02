@@ -65,110 +65,110 @@ namespace HomeWork_modul_01
             //}
 
             // Задание 5
-            //bool visokos = false;
-            //bool step = false;
-            //int year = 0, month = 0, day = 0;
-            //while(!step)
-            //{
-            //    Console.Write("Введите год (1584-2022): ");
-            //    year = Int32.Parse(Console.ReadLine());
-            //    if (year < 1584 || year > 2022)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }
-            //    else
-            //    {
-            //        if (year % 4 == 0 && year % 100 != 0)
-            //        {
-            //            Console.WriteLine("Выбран високосный год!");
-            //            visokos = true;
-            //        }
-            //        else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
-            //        {
-            //            Console.WriteLine("Выбран високосный год!");
-            //            visokos = true;
-            //        }
-            //        step = true;                
-            //    }
-            //}
-            //step = false;
+            bool visokos = false;
+            bool step = false;
+            int year = 0, month = 0, day = 0;
+            while (!step)
+            {
+                Console.Write("Введите год (1584-2022): ");
+                year = Int32.Parse(Console.ReadLine());
+                if (year < 1584 || year > 2022)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else
+                {
+                    if (year % 4 == 0 && year % 100 != 0)
+                    {
+                        Console.WriteLine("Выбран високосный год!");
+                        visokos = true;
+                    }
+                    else if (year % 400 == 0)
+                    {
+                        Console.WriteLine("Выбран високосный год!");
+                        visokos = true;
+                    }
+                    step = true;
+                }
+            }
+            step = false;
 
-            //while (!step)
-            //{
-            //    Console.Write("Введите месяц (1-12): ");
-            //    month = Int32.Parse(Console.ReadLine());
-            //    if (month < 1 || month > 12)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }
-            //    else
-            //    {
-            //        step = true;
-            //    } 
-            //}
-            //step = false;
+            while (!step)
+            {
+                Console.Write("Введите месяц (1-12): ");
+                month = Int32.Parse(Console.ReadLine());
+                if (month < 1 || month > 12)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else
+                {
+                    step = true;
+                }
+            }
+            step = false;
 
-            //while (!step)
-            //{
-            //    if (month == 2 && visokos == true) Console.WriteLine("В этом месяце 29 дней");
-            //    else if (month == 2 && visokos == false) Console.WriteLine("В этом месяце 28 дней");
-            //    else if (month == 4 || month == 6 || month == 9 || month == 11) Console.WriteLine("В этом месяце 30 дней");
-            //    else Console.WriteLine("В этом месяце 31 день");
-            //    Console.Write("Введите число (1-31): ");
-            //    day = Int32.Parse(Console.ReadLine());
-            //    if (day < 1 || day > 31)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }
-            //    else if (month == 2 && visokos == true && day > 29)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }
-            //    else if (month == 2 && visokos == false && day > 28)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }
-            //    else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30)
-            //    {
-            //        Console.WriteLine("Введите корректные данные!");
-            //        Thread.Sleep(1000);
-            //        Console.Clear();
-            //    }               
-            //    else step = true;
-            //}
+            while (!step)
+            {
+                if (month == 2 && visokos == true) Console.WriteLine("В этом месяце 29 дней");
+                else if (month == 2 && visokos == false) Console.WriteLine("В этом месяце 28 дней");
+                else if (month == 4 || month == 6 || month == 9 || month == 11) Console.WriteLine("В этом месяце 30 дней");
+                else Console.WriteLine("В этом месяце 31 день");
+                Console.Write("Введите число (1-31): ");
+                day = Int32.Parse(Console.ReadLine());
+                if (day < 1 || day > 31)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else if (month == 2 && visokos == true && day > 29)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else if (month == 2 && visokos == false && day > 28)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30)
+                {
+                    Console.WriteLine("Введите корректные данные!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                }
+                else step = true;
+            }
 
-            //if (month < 10 && day < 10) Console.Write($"Введена дата: 0{day}.0{month}.{year}");
-            //else if (day < 10) Console.Write($"Введена дата: 0{day}.{month}.{year}");
-            //else if (month < 10) Console.Write($"Введена дата: {day}.0{month}.{year}");
-            //else Console.WriteLine($"Введена дата: {day}.{month}.{year}");
+            if (month < 10 && day < 10) Console.Write($"Введена дата: 0{day}.0{month}.{year}");
+            else if (day < 10) Console.Write($"Введена дата: 0{day}.{month}.{year}");
+            else if (month < 10) Console.Write($"Введена дата: {day}.0{month}.{year}");
+            else Console.WriteLine($"Введена дата: {day}.{month}.{year}");
 
-            //Console.WriteLine();
-            //int index_year = year - (14 - month) / 12;
-            //int index_month = month + 12 * ((14 - month) / 12) - 2;
-            //int day_of_week = (7000 + (day + index_year + (index_year / 4) - (index_year / 100) + (index_year / 400) + ((31 * index_month) / 12))) % 7;
+            Console.WriteLine();
+            int index_year = year - (14 - month) / 12;
+            int index_month = month + 12 * ((14 - month) / 12) - 2;
+            int day_of_week = (7000 + (day + index_year + (index_year / 4) - (index_year / 100) + (index_year / 400) + ((31 * index_month) / 12))) % 7;
 
-            //if (month == 12 || month == 1 || month == 2) Console.Write($"Зима ");
-            //else if (month == 3 || month == 4 || month == 5) Console.Write($"Весна ");
-            //else if (month == 6 || month == 7 || month == 8) Console.Write($"Лето ");
-            //else if (month == 9 || month == 10 || month == 11) Console.Write($"Осень ");
+            if (month == 12 || month == 1 || month == 2) Console.Write($"Зима ");
+            else if (month == 3 || month == 4 || month == 5) Console.Write($"Весна ");
+            else if (month == 6 || month == 7 || month == 8) Console.Write($"Лето ");
+            else if (month == 9 || month == 10 || month == 11) Console.Write($"Осень ");
 
-            //if (day_of_week == 0) Console.Write($"Воскресенье");
-            //else if (day_of_week == 1) Console.Write($"Понедельник");
-            //else if (day_of_week == 2) Console.Write($"Вторник");
-            //else if (day_of_week == 3) Console.Write($"Среда");
-            //else if (day_of_week == 4) Console.Write($"Четверг");
-            //else if (day_of_week == 5) Console.Write($"Пятница");
-            //else if (day_of_week == 6) Console.Write($"Суббота");
+            if (day_of_week == 0) Console.Write($"Воскресенье");
+            else if (day_of_week == 1) Console.Write($"Понедельник");
+            else if (day_of_week == 2) Console.Write($"Вторник");
+            else if (day_of_week == 3) Console.Write($"Среда");
+            else if (day_of_week == 4) Console.Write($"Четверг");
+            else if (day_of_week == 5) Console.Write($"Пятница");
+            else if (day_of_week == 6) Console.Write($"Суббота");
 
             // Задание 6
             //Console.Write("Введите значение температуры: ");
