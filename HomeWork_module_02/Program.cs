@@ -63,7 +63,7 @@ namespace HomeWork_modul_02
             //Console.WriteLine($"Общий минимальный элемент: {(min1 < min2? min1: min2)}");
 
             // Задание 2
-#if false
+#if true
 
             int rows = 5, cols = 5;
             int[,] arr2 = new int[rows, cols];
@@ -74,7 +74,7 @@ namespace HomeWork_modul_02
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    arr2[i, j] = rnd.Next(10);
+                    arr2[i, j] = rnd.Next(-100,100);
                     Console.Write($"{arr2[i, j]} ");
                     if (i == 0 && j == 0) { min2 = max2 = arr2[i, j]; }
                     if (arr2[i, j] < min2)
