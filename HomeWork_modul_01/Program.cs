@@ -15,6 +15,11 @@ namespace HomeWork_modul_01
             // Задание 1
             //Console.Write("Введите число от 1 до 100: \n");
             //int a = Int32.Parse(Console.ReadLine());
+            //if (a < 1 || a > 100)
+            //{
+            //    Console.WriteLine("Error!");
+            //    return;
+            //}
             //if (a % 3 == 0 && a % 5 == 0) Console.WriteLine("Fizz Buzz");
             //else if (a % 3 == 0) Console.WriteLine("Fizz");
             //else if (a % 5 == 0) Console.WriteLine("Buzz");
@@ -65,6 +70,8 @@ namespace HomeWork_modul_01
             //}
 
             // Задание 5
+
+#if false
             bool visokos = false;
             bool step = false;
             int year = 0, month = 0, day = 0;
@@ -168,7 +175,8 @@ namespace HomeWork_modul_01
             else if (day_of_week == 3) Console.Write($"Среда");
             else if (day_of_week == 4) Console.Write($"Четверг");
             else if (day_of_week == 5) Console.Write($"Пятница");
-            else if (day_of_week == 6) Console.Write($"Суббота");
+            else if (day_of_week == 6) Console.Write($"Суббота"); 
+#endif
 
             // Задание 6
             //Console.Write("Введите значение температуры: ");
