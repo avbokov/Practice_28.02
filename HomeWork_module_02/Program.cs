@@ -144,6 +144,7 @@ namespace HomeWork_modul_02
             // Задание 3
 
 #if false
+            // В ссылке шифр Цезаря на инглише, буду реализовывать для латинницы. Для кириллицы принцип тот же самый.
             Console.WriteLine("Введите строку:");
             string str = Console.ReadLine().ToLower();
 
